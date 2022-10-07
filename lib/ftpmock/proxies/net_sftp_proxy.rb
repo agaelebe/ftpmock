@@ -5,10 +5,10 @@ module Ftpmock
     # Stubbers
 
     Real = begin
-             Net::SFTP
-           rescue NameError
-             nil
-           end
+      Net::SFTP
+    rescue NameError
+      nil
+    end
 
     # inspired by https://github.com/bblimke/webmock/blob/master/lib/webmock/http_lib_caches/net_http.rb
     def self.on!
